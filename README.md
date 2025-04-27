@@ -1,4 +1,4 @@
-# 科研论文自动化工具包
+# 科研论文自动化下载工具包
 
 ## 项目简介
 本工具包包含两个自动化脚本，分别用于学术论文信息采集和文献自动下载，助力科研工作者高效获取学术资源。
@@ -118,11 +118,6 @@ selenium >= 4.0
 undetected-chromedriver >= 3.1
 pandas >= 1.3
 tqdm >= 4.62
-```
-
-安装命令：
-```bash
-pip install -r requirements.txt
 ```
 
 ---
