@@ -42,10 +42,20 @@
 ```bash
 # 启动前准备（需手动操作）
 chrome.exe --remote-debugging-port=9222 --user-data-dir=C:\chrome_temp
-
-# 脚本执行
-python WOS.py <起始页码> <最大页数>
 ```
+修改
+```python
+main(start_page, pages_num, target_count)
+```
+中的参数
+
+参数说明
+| 参数       | 说明                  | 
+|------------|-----------------------|
+| start_page    | 起始页       | 
+| pages_num   | 获取页面数量          |
+| target_count   | 每一页最多有多少条论文信息          |
+
 
 ## 注意事项
 ⚠️ 浏览器需保持登录状态  
@@ -82,16 +92,18 @@ python WOS.py <起始页码> <最大页数>
 
 
 ## 使用说明
-```bash
-python auto_dwn.py --input wos_results.csv --output papers --workers 8
+修改
+```python
+main(input_csv, save_dir, max_workers)
 ```
+中的参数
 
 参数说明
-| 参数       | 说明                  | 默认值         |
-|------------|-----------------------|---------------|
-| --input    | 输入CSV文件路径       | wos_results.csv |
-| --output   | 论文保存目录          | ./papers       |
-| --workers  | 并行下载线程数        | 8              |
+| 参数       | 说明                  | 
+|------------|-----------------------|
+| input_csv    | 输入CSV文件路径       | 
+| save_dir   | 论文保存目录          |
+| max_workers  | 并行下载线程数        |
 
 ---
 
