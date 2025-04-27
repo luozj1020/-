@@ -58,6 +58,7 @@ main(start_page, pages_num, target_count)
 
 
 ## 注意事项
+⚠️ 程序开始运行时会有120s登录Web of Science
 ⚠️ 浏览器需保持登录状态  
 ⚠️ 建议单次采集不超过100页  
 ⚠️ 数据存储为UTF-8格式CSV
