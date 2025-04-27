@@ -199,4 +199,4 @@ if __name__ == "__main__":
     #    chrome.exe --remote-debugging-port=9222 --user-data-dir=C:\chrome_temp
     # 2. 登录并导航到目标页面
     # 3. 运行此脚本
-    main(355, 786-355+1, 50)
+    main(355, 786-355+1, 50)  # example
