@@ -39,6 +39,9 @@
 
 
 ## 使用说明
+（采用连接已打开的浏览器进行selenium自动信息采集而不是直接用selenium自动化控制浏览器，因为直接自动化控制浏览器会导致web of science服务器连接失败）
+
+打开一个chrome浏览器，登录web of science并搜索你需要的论文，复制论文信息页面的链接，**不要关闭这个浏览器**
 ```bash
 # 启动前准备（需手动操作）
 chrome.exe --remote-debugging-port=9222 --user-data-dir=C:\chrome_temp
@@ -47,7 +50,9 @@ chrome.exe --remote-debugging-port=9222 --user-data-dir=C:\chrome_temp
 ```python
 main(start_page, pages_num, target_count)
 ```
-中的参数
+中的参数，并运行脚本
+
+程序开始运行时会有120s在脚本打开的新浏览器登录Web of Science（以及接受cookies等操作），复制之前的链接到新浏览器（假如之前某一页信息获取失败了，就复制粘贴那一页的链接，并正确设置参数）
 
 参数说明
 | 参数       | 说明                  | 
@@ -58,7 +63,6 @@ main(start_page, pages_num, target_count)
 
 
 ## 注意事项
-⚠️ 程序开始运行时会有120s登录Web of Science  
 ⚠️ 浏览器需保持登录状态  
 ⚠️ 建议单次采集不超过100页  
 ⚠️ 数据存储为UTF-8格式CSV
